@@ -1,4 +1,4 @@
-Delete all executable files in Mac command line
+**`Delete all executable files in Mac command line`**
 ```vim
 find . -maxdepth 1 -perm -111 -delete
 ```
