@@ -4,7 +4,7 @@ find . -maxdepth 1 -perm -111 -delete
 ```
 
 **pip install from git**
-```vim
+```bash
 # hash
 pip install git+git://github.com/aladagemre/django-notification.git@2927346f4c513a217ac8ad076e494dd1adbf70e1
 
