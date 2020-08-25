@@ -44,7 +44,7 @@ createdb -O <user_name> <db_name>
 ##### Login to database
 
 ```bash
-psql -d <database> -U <user_name>
+psql -U <user_name> -d <database> -h <host> -p <port> -a
 ```
 
 ##### Drop user/role
