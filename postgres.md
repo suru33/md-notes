@@ -49,7 +49,7 @@ psql -U <user_name> -d <database> -h <host> -p <port> -a
 
 ##### Drop user/role
 
-```bash
+```vim
 drop user <user_name>
 ```
 
