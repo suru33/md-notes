@@ -50,6 +50,6 @@ psql -U <user_name> -d <database> -h <host> -p <port> -a
 ##### Drop user/role
 
 ```bash
-dropuser <user_name>
+drop user <user_name>
 ```
 
