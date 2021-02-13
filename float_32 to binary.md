@@ -1,4 +1,4 @@
-# `float_32` to `binary` convesion
+# `float_32` to `binary` conversion
 
 The size of `union` is the size of one of the largest member element
 
