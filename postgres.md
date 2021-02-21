@@ -1,8 +1,7 @@
 ### Install postgres from binaries
 
 
-
-**Files Location**: https://www.enterprisedb.com/download-postgresql-binaries
+[Download Here!](https://www.enterprisedb.com/download-postgresql-binaries)
 
 Extract...... :thumbsup:
 
@@ -10,10 +9,10 @@ in `.bash_profile` or `.zshrc`
 
 ```bash
 # Postgres config
-export PATH="/Users/suru/dev/pgsql/bin:$PATH"
+export PATH="$HOME/dev/pgsql/bin:$PATH"
 
-export PGLOGFILE="/Users/suru/dev/pgdata/postgres.log"
-export PGDATA="/Users/suru/dev/pgdata"
+export PGLOGFILE="$HOME/dev/pgdata/postgres.log"
+export PGDATA="$HOME/dev/pgdata"
 
 alias start_postgres="pg_ctl -D ${PGDATA} -l ${PGLOGFILE} start"
 alias stop_postgres="pg_ctl -D ${PGDATA} -l ${PGLOGFILE} stop"	
