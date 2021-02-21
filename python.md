@@ -1,7 +1,4 @@
-**Delete all executable files in Mac command line**
-```vim
-find . -maxdepth 1 -perm -111 -delete
-```
+# Python
 
 **pip install from git**
 ```bash
