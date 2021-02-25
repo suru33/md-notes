@@ -37,3 +37,8 @@ cargo build
 # For release build
 cargo build --release
 ```
+
+### Idiomatic rust check
+```sh
+cargo clippy
+```
