@@ -22,3 +22,8 @@ pip install https://github.com/aladagemre/django-notification/archive/v2.1.0.tar
 ```sh
 pip3 list --format=freeze | grep -v '^\-e' | cut -d = -f 1 | xargs -n1 pip3 install
 ```
+
+```bash
+# SuRu
+pip3 freeze | cut -d'=' -f 1 | xargs pip3 install --upgrade
+```
