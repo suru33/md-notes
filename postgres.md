@@ -9,10 +9,11 @@ in `.bash_profile` or `.zshrc`
 
 ```bash
 # Postgres config
-export PATH="$HOME/dev/pgsql/bin:$PATH"
+export PGHOME="$HOME/dev/postgres"
+export PGLOGFILE="$PGHOME/postgres.log"
+export PGDATA="$PGHOME/pgdata"
 
-export PGLOGFILE="$HOME/dev/pgdata/postgres.log"
-export PGDATA="$HOME/dev/pgdata"
+export PATH="$PGHOME/pgsql/bin:$PATH"
 
 alias start_postgres="pg_ctl -D ${PGDATA} -l ${PGLOGFILE} start"
 alias stop_postgres="pg_ctl -D ${PGDATA} -l ${PGLOGFILE} stop"	
