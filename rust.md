@@ -1,6 +1,10 @@
 # Rust HowTo
 
 ### Installing
+
+[Original installation instructions](https://www.rust-lang.org/tools/install)
+
+#### MacOS Homebrew
 ```sh
 brew install rustup-init
 
