@@ -1,8 +1,8 @@
-# Rust tools how-to in MacOS
+# Rust tools setup
 
 ### Installing
 
-[Original installation instructions](https://www.rust-lang.org/tools/install)
+[Original installation instructions for all OS](https://www.rust-lang.org/tools/install)
 
 #### MacOS Homebrew
 ```shell
