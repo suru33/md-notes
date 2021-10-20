@@ -1,13 +1,46 @@
-### Install postgres from binaries
+# Postgres HELP
 
+## Install postgres from binaries
 
-[Download Here!](https://www.enterprisedb.com/download-postgresql-binaries)
+[Download binaries from here!](https://www.enterprisedb.com/download-postgresql-binaries)
 
-Extract...... :thumbsup:
+## Install postgres from source
 
-in `.bash_profile` or `.zshrc`
+- [Download sources from here!](https://www.postgresql.org/ftp/source/)
+  ```shell
+  # Extract the source
+  tar -xvzf postgresql-<VERSION>.tar.gz
+  cd postgresql-<VERSION>
+  ```
+- Clone from git, [check tags here!](https://git.postgresql.org/gitweb/?p=postgresql.git;a=tags)
+  ```shell
+  # Clone the repo
+  git clone --depth 1 -b <TAG> https://git.postgresql.org/git/postgresql.git
+  cd postgresql
+  ```
+- Make and Install
+  ```shell
+  # Check openssl
+  which openssl
+  
+  # Configure the build
+  ./configure --with-openssl \
+    --with-includes=/usr/local/opt/openssl/include \
+    --with-libraries=/usr/local/opt/openssl/lib 
+    --prefix $HOME/dev/postgres/pgsql
+  
+  # Make
+  make world
+  
+  # Install
+  make install-world 
+  ```
 
-```bash
+## Configure
+
+### env variables and aliases
+
+```shell
 # Postgres config
 export PGHOME="$HOME/dev/postgres"
 export PGLOGFILE="$PGHOME/postgres.log"
@@ -16,40 +49,29 @@ export PGDATA="$PGHOME/pgdata"
 export PATH="$PGHOME/pgsql/bin:$PATH"
 
 alias start_postgres="pg_ctl -D ${PGDATA} -l ${PGLOGFILE} start"
-alias stop_postgres="pg_ctl -D ${PGDATA} -l ${PGLOGFILE} stop"	
+alias stop_postgres="pg_ctl -D ${PGDATA} -l ${PGLOGFILE} stop"
 ```
 
-##### InitDB (create database folder structure)
+### InitDB (create database folder structure)
 
-```bash
+```shell
 initdb ${PGDATA}
 ```
 
-##### Create user/role
+### Create user/role
 
-```bash
+```shell
 createuser --interactive --pwprompt
-	Enter name of role to add: <user>
-	Enter password for new role:
-	Enter it again:
-	Shall the new role be a superuser? (y/n)
 ```
 
-##### Create database
+### Create database
 
-```bash
+```shell
 createdb -O <user_name> <db_name>
 ```
 
-##### Login to database
+### Login to database
 
-```bash
-psql -U <user_name> -d <database> -h <host> -p <port> -a
+```shell
+psql -U <user_name> -d <database> [-h <host>] [-p <port>] -a
 ```
-
-##### Drop user/role
-
-```vim
-drop user <user_name>
-```
-
