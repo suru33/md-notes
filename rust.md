@@ -5,24 +5,24 @@
 [Original installation instructions](https://www.rust-lang.org/tools/install)
 
 #### MacOS Homebrew
-```sh
+```shell
 brew install rustup-init
 
 # It will install rustc and cargo
 ```
 
 ### Rust documentation
-```sh
+```shell
 rustup doc
 ```
 
 ### To update
-```sh
+```shell
 rustup update
 ```
 
 ### To create a new project
-```
+```shell
 # For binary project
 cargo new --bin <project_name>
 
@@ -31,7 +31,7 @@ cargo new --lib <library_name>
 ```
 
 ### To compile
-```sh
+```shell
 # To compile and run at the same time
 cargo run
 
@@ -43,6 +43,6 @@ cargo build --release
 ```
 
 ### Idiomatic rust check
-```sh
+```shell
 cargo clippy
 ```
