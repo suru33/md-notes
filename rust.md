@@ -1,4 +1,4 @@
-# Rust HowTo
+# Rust tools how-to in MacOS
 
 ### Installing
 
