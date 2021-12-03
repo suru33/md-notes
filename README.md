@@ -13,4 +13,4 @@
     - [Postgres](/dev/postgres.md)
     - [Rust](/dev/rust.md)
 - Notes
-    - [float-32 to binary](/notes/float_32-to-binary.md)
+    - [float-32 to binary conversion](/notes/float_32-to-binary.md)
