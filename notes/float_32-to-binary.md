@@ -3,6 +3,7 @@
 The size of `union` is the size of one of the largest member element
 
 **For example:**
+
 ```cpp
 union point_t {
     int i;
@@ -18,7 +19,9 @@ std::cout << "c: " << point.c << std::endl;
 std::cout << "f: " << point.f << std::endl;
     :
 ```
+
 Output:
+
 ``` bash
 i: 65
 c: A
@@ -31,7 +34,7 @@ f: 9.10844e-44
 ```bash
 # float_32 memory layout
 
-☐-☐☐☐☐☐☐☐☐-☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐
+# ☐-☐☐☐☐☐☐☐☐-☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐
 
  1 bit  -> Sign
  8 bits -> Int part (Exponent)
@@ -39,7 +42,9 @@ f: 9.10844e-44
 ```
 
 ## Math time
+
 Converting (+98.569)<sub>10</sub> to (xxxx)<sub>2</sub>
+
 ```bash
  Bit
  Position
@@ -72,6 +77,7 @@ Converting (+98.569)<sub>10</sub> to (xxxx)<sub>2</sub>
 No more bits
 
 ```
+
 ```py
 # Collect all exponents (1 and 0) from multiplication
 
